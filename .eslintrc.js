@@ -1,29 +1,36 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', '@react-native-community'],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "@react-native-community"
+  ],
   overrides: [
     {
       env: {
-        node: true,
+        node: true
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: [".eslintrc.{js,cjs}"],
       parserOptions: {
-        sourceType: 'script',
-      },
-    },
+        sourceType: "script"
+      }
+    }
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module"
   },
-  plugins: ['react'],
+  plugins: ["react"],
   rules: {
-    semi: ['error', 'never'],
-    'comm-dangle': [2, 'never'],
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-    'no-use-before-define': ['error', { functions: true, classes: true, variables: false }],
-  },
+    semi: ["error", "never"],
+    // "comm-dangle": [2, "never"],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "no-use-before-define": [
+      "error",
+      { functions: true, classes: true, variables: false }
+    ]
+  }
 }
