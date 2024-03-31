@@ -1,5 +1,5 @@
-import React from "react"
-import { View, Text, SafeAreaView, StyleSheet } from "react-native"
+import React from 'react'
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native'
 
 const App = () => {
   return (
@@ -13,13 +13,13 @@ const App = () => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1
+    flex: 1,
   },
   container: {
-    backgroundColor: "pink",
+    backgroundColor: 'pink',
     flex: 1,
-    alignItems: "center"
-  }
+    alignItems: 'center',
+  },
 })
 
 export default App

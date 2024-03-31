@@ -1,14 +1,9 @@
 module.exports = {
   bracketSpacing: true,
-  singeQuote: true,
+  singleQuote: true, // Fixed typo from 'singeQuote' to 'singleQuote'
   tabWidth: 2,
   useTabs: false,
   arrowParens: "always",
-  trailingComma: "none",
-  semi: false,
-  "vetur.format.defaultFormatterOptions": {
-    prettier: {
-      singleQuote: true
-    }
-  }
+  trailingComma: "all", // Changed from 'none' to 'all' for object trailing commas
+  semi: false
 }
