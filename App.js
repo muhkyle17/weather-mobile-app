@@ -23,10 +23,9 @@ const App = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: 'pink',
   },
   container: {
-    backgroundColor: 'pink',
     flex: 1,
     alignItems: 'center',
   },
