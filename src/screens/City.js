@@ -5,10 +5,20 @@ import {
   ImageBackground,
   StyleSheet,
   StatusBar,
+  View,
 } from 'react-native'
+import { Feather } from '@expo/vector-icons'
 
 const City = () => {
-  const { container, imageLayout, cityName, countryName, cityText } = styles
+  const {
+    container,
+    imageLayout,
+    cityName,
+    countryName,
+    cityText,
+    populationWrapper,
+    populationText,
+  } = styles
 
   return (
     <SafeAreaView style={container}>
@@ -18,6 +28,10 @@ const City = () => {
       >
         <Text style={[cityName, cityText]}>London</Text>
         <Text style={[countryName, cityText]}>UK</Text>
+        <View style={populationWrapper}>
+          <Feather name={'user'} size={50} color={'red'} />
+          <Text style={populationText}>8000</Text>
+        </View>
       </ImageBackground>
     </SafeAreaView>
   )
@@ -41,6 +55,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     color: 'white',
+    fontWeight: 'bold',
+  },
+  populationWrapper: {
+    flexDirection: 'row',
+    alignItem: 'center',
+    justifyContent: 'center',
+    marginTop: 30,
+  },
+  populationText: {
+    fontSize: 25,
+    marginLeft: 7.5,
+    color: 'red',
     fontWeight: 'bold',
   },
 })
