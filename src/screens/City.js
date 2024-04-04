@@ -1,18 +1,33 @@
 import React from 'react'
-import { SafeAreaView, Text, StyleSheet } from 'react-native'
+import {
+  SafeAreaView,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  StatusBar,
+} from 'react-native'
 
 const City = () => {
-  const { container } = styles
+  const { container, imageLayout } = styles
 
   return (
     <SafeAreaView style={container}>
-      <Text>City</Text>
+      <ImageBackground
+        source={require('../../assets/city-background.jpeg')}
+        style={imageLayout}
+      >
+        <Text>Hi</Text>
+      </ImageBackground>
     </SafeAreaView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
+  },
+  imageLayout: {
     flex: 1,
   },
 })
