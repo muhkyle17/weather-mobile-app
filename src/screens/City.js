@@ -18,6 +18,8 @@ const City = () => {
     cityText,
     populationWrapper,
     populationText,
+    riseSetWrapper,
+    riseSetText,
   } = styles
 
   return (
@@ -31,6 +33,12 @@ const City = () => {
         <View style={populationWrapper}>
           <Feather name={'user'} size={50} color={'red'} />
           <Text style={populationText}>8000</Text>
+        </View>
+        <View style={riseSetWrapper}>
+          <Feather name={'sunrise'} size={'50'} color={'white'} />
+          <Text style={riseSetText}>10:46:58am</Text>
+          <Feather name={'sunset'} size={'50'} color={'white'} />
+          <Text style={riseSetText}>17:28:15pm</Text>
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -67,6 +75,17 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginLeft: 7.5,
     color: 'red',
+    fontWeight: 'bold',
+  },
+  riseSetWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginTop: 30,
+  },
+  riseSetText: {
+    fontSize: 20,
+    color: 'white',
     fontWeight: 'bold',
   },
 })
