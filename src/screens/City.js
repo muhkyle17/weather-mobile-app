@@ -8,6 +8,7 @@ import {
   View,
 } from 'react-native'
 import { Feather } from '@expo/vector-icons'
+import IconText from '../components/IconText'
 
 const City = () => {
   const {
@@ -31,14 +32,26 @@ const City = () => {
         <Text style={[cityName, cityText]}>London</Text>
         <Text style={[countryName, cityText]}>UK</Text>
         <View style={populationWrapper}>
-          <Feather name={'user'} size={50} color={'red'} />
-          <Text style={populationText}>8000</Text>
+          <IconText
+            iconName={'user'}
+            iconColor={'red'}
+            bodyText={'8000'}
+            bodyTextStyles={populationText}
+          />
         </View>
         <View style={riseSetWrapper}>
-          <Feather name={'sunrise'} size={'50'} color={'white'} />
-          <Text style={riseSetText}>10:46:58am</Text>
-          <Feather name={'sunset'} size={'50'} color={'white'} />
-          <Text style={riseSetText}>17:28:15pm</Text>
+          <IconText
+            iconName={'sunrise'}
+            iconColor={'white'}
+            bodyText={'10:46:58am'}
+            bodyTextStyles={riseSetText}
+          />
+          <IconText
+            iconName={'sunset'}
+            iconColor={'white'}
+            bodyText={'17:28:15pm'}
+            bodyTextStyles={riseSetText}
+          />
         </View>
       </ImageBackground>
     </SafeAreaView>
@@ -75,7 +88,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginLeft: 7.5,
     color: 'red',
-    fontWeight: 'bold',
   },
   riseSetWrapper: {
     flexDirection: 'row',
@@ -86,7 +98,6 @@ const styles = StyleSheet.create({
   riseSetText: {
     fontSize: 20,
     color: 'white',
-    fontWeight: 'bold',
   },
 })
 
