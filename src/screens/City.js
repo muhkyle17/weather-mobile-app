@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 
 const City = () => {
-  const { container, imageLayout, cityName, countryName } = styles
+  const { container, imageLayout, cityName, countryName, cityText } = styles
 
   return (
     <SafeAreaView style={container}>
@@ -16,8 +16,8 @@ const City = () => {
         source={require('../../assets/city-background.jpeg')}
         style={imageLayout}
       >
-        <Text style={cityName}>London</Text>
-        <Text style={countryName}>UK</Text>
+        <Text style={[cityName, cityText]}>London</Text>
+        <Text style={[countryName, cityText]}>UK</Text>
       </ImageBackground>
     </SafeAreaView>
   )
@@ -32,16 +32,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   cityName: {
-    justifyContent: 'center',
-    alignSelf: 'center',
     fontSize: 40,
-    fontWeight: 'bold',
-    color: 'white',
   },
   countryName: {
+    fontSize: 30,
+  },
+  cityText: {
     justifyContent: 'center',
     alignSelf: 'center',
-    fontSize: 30,
     color: 'white',
     fontWeight: 'bold',
   },
