@@ -21,6 +21,7 @@ const City = () => {
     populationText,
     riseSetWrapper,
     riseSetText,
+    rowLayout,
   } = styles
 
   return (
@@ -31,7 +32,7 @@ const City = () => {
       >
         <Text style={[cityName, cityText]}>London</Text>
         <Text style={[countryName, cityText]}>UK</Text>
-        <View style={populationWrapper}>
+        <View style={[populationWrapper, rowLayout]}>
           <IconText
             iconName={'user'}
             iconColor={'red'}
@@ -39,7 +40,7 @@ const City = () => {
             bodyTextStyles={populationText}
           />
         </View>
-        <View style={riseSetWrapper}>
+        <View style={[riseSetWrapper, rowLayout]}>
           <IconText
             iconName={'sunrise'}
             iconColor={'white'}
@@ -79,8 +80,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   populationWrapper: {
-    flexDirection: 'row',
-    alignItem: 'center',
     justifyContent: 'center',
     marginTop: 30,
   },
@@ -90,14 +89,16 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   riseSetWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-around',
     marginTop: 30,
   },
   riseSetText: {
     fontSize: 20,
     color: 'white',
+  },
+  rowLayout: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 })
 
