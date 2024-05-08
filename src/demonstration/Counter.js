@@ -6,28 +6,34 @@ const Counter = () => {
   const [newCount, setNewCount] = useState(0)
 
   useEffect(() => {
-    console.log(`Count changed`)
+    console.log('count changed')
     return () => {
-      console.log('useEffect cleanup')
+      console.log('useeffect cleanup')
     }
   }, [count])
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{`count: ${count}`}</Text>
+      <Text style={styles.title}>{`Count: ${count}`}</Text>
       <Button
         color={'red'}
-        title="Increase the count"
-        onPress={() => {
-          setNewCount(count + 1)
-        }}
+        title={'Increase the count'}
+        onPress={() => setCount(count + 1)}
       />
       <Button
         color={'green'}
         title={'Decrease the count'}
-        onPress={() => {
-          setNewCount(count - 1)
-        }}
+        onPress={() => setCount(count - 1)}
+      />
+      <Button
+        color={'red'}
+        title={'Increase the count'}
+        onPress={() => setNewCount(newCount + 1)}
+      />
+      <Button
+        color={'green'}
+        title={'Decrease the count'}
+        onPress={() => setNewCount(newCount - 1)}
       />
     </View>
   )
@@ -36,13 +42,13 @@ const Counter = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: 'orange'
   },
   title: {
     alignSelf: 'center',
     fontSize: 25,
-    marginTop: 100,
-  },
+    marginTop: 25
+  }
 })
 
 export default Counter
