@@ -5,7 +5,7 @@ import {
   StyleSheet,
   ImageBackground,
   StatusBar,
-  View
+  View,
 } from 'react-native'
 import moment from 'moment'
 import IconText from '../components/IconText'
@@ -22,7 +22,7 @@ const City = ({ weatherData }) => {
     populationText,
     riseSetWrapper,
     riseSetText,
-    rowLayout
+    rowLayout,
   } = styles
   return (
     <SafeAreaView style={container}>
@@ -62,44 +62,44 @@ const City = ({ weatherData }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0
+    marginTop: StatusBar.currentHeight || 0,
   },
   imageLayout: {
-    flex: 1
+    flex: 1,
   },
   cityName: {
-    fontSize: 40
+    fontSize: 40,
   },
   countryName: {
-    fontSize: 30
+    fontSize: 30,
   },
   cityText: {
     justifyContent: 'center',
     alignSelf: 'center',
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   populationWrapper: {
     justifyContent: 'center',
-    marginTop: 30
+    marginTop: 30,
   },
   populationText: {
     fontSize: 25,
     marginLeft: 7.5,
-    color: 'red'
+    color: 'red',
   },
   riseSetWrapper: {
     justifyContent: 'space-around',
-    marginTop: 30
+    marginTop: 30,
   },
   rowLayout: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   riseSetText: {
     fontSize: 20,
-    color: 'white'
-  }
+    color: 'white',
+  },
 })
 
 export default City

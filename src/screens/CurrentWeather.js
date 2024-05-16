@@ -5,7 +5,10 @@ import RowText from '../components/RowText'
 import { weatherType } from '../utilities/weatherType'
 
 const CurrentWeather = ({ weatherData }) => {
-  const { main: { temp, feels_like, temp_max, temp_min }, weather } = weatherData
+  const {
+    main: { temp, feels_like, temp_max, temp_min },
+    weather,
+  } = weatherData
   const weatherCondition = weather[0].main
 
   const {
@@ -17,14 +20,14 @@ const CurrentWeather = ({ weatherData }) => {
     hiLow,
     bodyWrapper,
     description,
-    message
+    message,
   } = styles
 
   return (
     <SafeAreaView
       style={[
         wrapper,
-        { backgroundColor: weatherType[weatherCondition]?.backgroundColor }
+        { backgroundColor: weatherType[weatherCondition]?.backgroundColor },
       ]}
     >
       <View style={container}>
@@ -56,39 +59,39 @@ const CurrentWeather = ({ weatherData }) => {
 
 const styles = StyleSheet.create({
   wrapper: {
-    flex: 1
+    flex: 1,
   },
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   temperature: {
     color: 'black',
-    fontSize: 48
+    fontSize: 48,
   },
   feels: {
     fontSize: 30,
-    color: 'black'
+    color: 'black',
   },
   hiLow: {
     color: 'black',
-    fontSize: 20
+    fontSize: 20,
   },
   hiLowWrapper: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   bodyWrapper: {
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
     paddingLeft: 25,
-    marginBottom: 40
+    marginBottom: 40,
   },
   description: {
-    fontSize: 43
+    fontSize: 43,
   },
   message: {
-    fontSize: 25
-  }
+    fontSize: 25,
+  },
 })
 export default CurrentWeather
