@@ -28,18 +28,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     borderWidth: 5,
-    backgroundColor: 'indianred'
+    backgroundColor: 'indianred',
   },
   temp: {
     color: 'white',
-    fontSize: 20
+    fontSize: 20,
   },
   date: {
     color: 'white',
-    fontSize: 15
+    fontSize: 15,
   },
   dateTextWrapper: {
-    flexDirection: 'column'
-  }
+    flexDirection: 'column',
+  },
 })
 export default ListItem

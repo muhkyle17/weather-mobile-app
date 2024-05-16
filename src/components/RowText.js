@@ -7,7 +7,7 @@ const RowText = (props) => {
     messageTwo,
     containerStyles,
     messageOneStyles,
-    messageTwoStyles
+    messageTwoStyles,
   } = props
 
   return (
