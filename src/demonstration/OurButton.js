@@ -18,12 +18,12 @@ const styles = StyleSheet.create({
     elevation: 8,
     backgroundColor: 'blue',
     borderRadius: 10,
-    padding: 5
+    padding: 5,
   },
   buttonText: {
     fontSize: 15,
     color: 'white',
-    alignSelf: 'center'
-  }
+    alignSelf: 'center',
+  },
 })
 export default OurButton

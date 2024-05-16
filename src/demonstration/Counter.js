@@ -42,13 +42,13 @@ const Counter = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange'
+    backgroundColor: 'orange',
   },
   title: {
     alignSelf: 'center',
     fontSize: 25,
-    marginTop: 25
-  }
+    marginTop: 25,
+  },
 })
 
 export default Counter
