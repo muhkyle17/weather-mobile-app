@@ -16,16 +16,16 @@ const Tabs = ({ weather }) => {
         tabBarActiveTintColor: 'tomato',
         tabBarInactiveTintColor: 'gray',
         tabBarStyle: {
-          backgroundColor: 'lightblue'
+          backgroundColor: 'lightblue',
         },
         headerStyle: {
-          backgroundColor: 'lightblue'
+          backgroundColor: 'lightblue',
         },
         headerTitleStyle: {
           fontWeight: 'bold',
           fontSize: 25,
-          color: 'tomato'
-        }
+          color: 'tomato',
+        },
       }}
     >
       <Tab.Screen
@@ -37,7 +37,7 @@ const Tabs = ({ weather }) => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
-          )
+          ),
         }}
       >
         {() => <CurrentWeather weatherData={weather.list[0]} />}
@@ -51,7 +51,7 @@ const Tabs = ({ weather }) => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
-          )
+          ),
         }}
       >
         {() => <UpcomingWeather weatherData={weather.list} />}
@@ -65,7 +65,7 @@ const Tabs = ({ weather }) => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
-          )
+          ),
         }}
       >
         {() => <City weatherData={weather.city} />}
