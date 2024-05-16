@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'red',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   errorMessage: {
     fontSize: 30,
     color: 'white',
     marginHorizontal: 10,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 })
 export default ErrorItem

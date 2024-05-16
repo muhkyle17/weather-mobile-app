@@ -15,10 +15,10 @@ const IconText = (props) => {
 
 const styles = StyleSheet.create({
   textTheme: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   container: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 })
 export default IconText
